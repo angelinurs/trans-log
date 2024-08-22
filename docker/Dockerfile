@@ -5,6 +5,9 @@ ENTRYPOINT ["/usr/sbin/init"]
 ENV WORK_HOME /app
 ENV TZ=Asia/Seoul
 
+ENV USER naru
+ENV DIRECTORY /home/${USER}/storage
+
 RUN set -eux; \
     ln -Tfs /usr/share/zoneinfo/Asia/Seoul /etc/localtime;
 
@@ -29,9 +32,12 @@ RUN useradd -m naru && \
 
 # SSH 서버의 비밀번호 인증을 허용하도록 설정
 RUN sed -i 's/^#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+RUN mkdir /home/naru/storage
 
-# 포트 22를 노출
+RUN sudo -u $USER mkdir -p $DIRECTORY && \
+    sudo chown $USER:$USER $DIRECTORY && \
+    sudo chmod 755 $DIRECTORY
+
 EXPOSE 22
 
-# SSH 서버 실행
 CMD ["/usr/sbin/sshd", "-D"]
