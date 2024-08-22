@@ -1,0 +1,54 @@
+services:
+  # postgresql
+  backend-db:
+    image: postgres:${POSTGRES_IMAGE_TAG}
+    restart: ${RESTART}
+    container_name: backend-db
+    hostname: backend-db
+    tmpfs:
+      - /tmp
+      - /var/run/postgresql
+    volumes:
+      - ${BACKEND_DATA:-.}/postgres/pg_data:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+    environment:
+      - TZ
+      - POSTGRES_DB
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - POSTGRES_INITDB_ARGS
+    networks:
+      - backend-network
+      - external-network
+    # restart: always
+    restart: unless-stopped
+
+  sftp: ## Service Name
+    container_name: rocky88 ## Container Name
+    build:
+      context: . ## build Docker file location
+      dockerfile: Dockerfile ## build file name
+    ports:
+      - '11122:22'
+    privileged: true
+    # security_opt:
+    #  - no-new-privileges:true
+    # depends_on:
+    #   - mysql-server
+    cap_add:
+      # Needed for WireGuard and firewall support.
+      - NET_ADMIN
+      - SYS_MODULE
+    networks:
+      - backend-network
+      - external-network
+    # restart: always
+    restart: unless-stopped
+
+networks:
+  backend-network:
+    driver: bridge
+  external-network:
+    driver_opts:
+      com.docker.network.bridge.host_binding_ipv4: "127.0.0.1"

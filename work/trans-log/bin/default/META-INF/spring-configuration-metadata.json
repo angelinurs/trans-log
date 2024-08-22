@@ -1,0 +1,62 @@
+{
+  "groups": [
+    {
+      "name": "app",
+      "type": "com.beat.trans_log.config.AppProperties",
+      "sourceType": "com.beat.trans_log.config.AppProperties"
+    },
+    {
+      "name": "sftp",
+      "type": "com.beat.trans_log.config.SftpAuthenticationProperties",
+      "sourceType": "com.beat.trans_log.config.SftpAuthenticationProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "app.default-log-directory",
+      "type": "java.lang.String",
+      "sourceType": "com.beat.trans_log.config.AppProperties"
+    },
+    {
+      "name": "app.hash-algorithm",
+      "type": "java.lang.String",
+      "sourceType": "com.beat.trans_log.config.AppProperties"
+    },
+    {
+      "name": "sftp.host",
+      "type": "java.lang.String",
+      "sourceType": "com.beat.trans_log.config.SftpAuthenticationProperties"
+    },
+    {
+      "name": "sftp.password",
+      "type": "java.lang.String",
+      "sourceType": "com.beat.trans_log.config.SftpAuthenticationProperties"
+    },
+    {
+      "name": "sftp.port",
+      "type": "java.lang.String",
+      "sourceType": "com.beat.trans_log.config.SftpAuthenticationProperties"
+    },
+    {
+      "name": "sftp.private-key",
+      "type": "java.lang.String",
+      "sourceType": "com.beat.trans_log.config.SftpAuthenticationProperties"
+    },
+    {
+      "name": "sftp.private-key-pass-phrase",
+      "type": "java.lang.String",
+      "sourceType": "com.beat.trans_log.config.SftpAuthenticationProperties"
+    },
+    {
+      "name": "sftp.remote-dir",
+      "type": "java.lang.String",
+      "sourceType": "com.beat.trans_log.config.SftpAuthenticationProperties"
+    },
+    {
+      "name": "sftp.user",
+      "type": "java.lang.String",
+      "sourceType": "com.beat.trans_log.config.SftpAuthenticationProperties"
+    }
+  ],
+  "hints": []
+}
