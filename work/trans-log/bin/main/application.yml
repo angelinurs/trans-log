@@ -2,39 +2,9 @@ server:
   port: -1
 
 spring:
+  profiles:
+    active: dev
   application: 
     name: trans-log
   main:
     web-application-type: none
-  datasource:
-    url: jdbc:postgresql://localhost:5432/backend
-    driver-class-name: org.postgresql.Driver
-    username: naru
-    password: naru0914
-
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-        jdbc:
-          batch_size: 20
-        order_inserts: true
-        format_sql: true
-        use_sql_comments: true
-    defer-datasource-initialization: true
-
-sftp:
-  HOST: localhost
-  PORT: "11122"
-  USER: naru
-  PASSWORD: naru0914
-#  PRIVATE_KEY: c:\lab\ssis\secret\id_rsa
-#  PRIVATE_KEY_PASSPHRASE:
-  REMOTE_DIR: /home/naru/storage
-
-app:
-  default-log-directory: /Users/kiwi/lab/project/log-trans/sample-log
-  hash-algorithm: SHA-256

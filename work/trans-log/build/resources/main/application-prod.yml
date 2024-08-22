@@ -1,0 +1,5 @@
+spring:
+  config:
+    import:
+    - classpath:prod/prod-db.yml
+    - classpath:prod/prod-sftp.yml
