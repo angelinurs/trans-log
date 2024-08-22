@@ -1,4 +1,6 @@
 spring:
+  devtools:
+    add-properties: false
   config:
     import:
     - classpath:prod/prod-db.yml
