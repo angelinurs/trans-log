@@ -1,0 +1,24 @@
+2024-08-22 19:18:19.132  INFO 16931 --- [  restartedMain] com.beat.trans_log.TransLogApplication   : Starting TransLogApplication using Java 17.0.12 with PID 16931 (/Users/kiwi/lab/project/log-trans/work/trans-log/bin/main started by kiwi in /Users/kiwi/lab/project/log-trans/work/trans-log)
+2024-08-22 19:18:19.169  INFO 16931 --- [  restartedMain] com.beat.trans_log.TransLogApplication   : The following 1 profile is active: "dev"
+2024-08-22 19:18:19.289  INFO 16931 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-22 19:18:19.736  INFO 16931 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-22 19:18:19.794  INFO 16931 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 1 JPA repository interface.
+2024-08-22 19:18:20.132  INFO 16931 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-22 19:18:20.184  INFO 16931 --- [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-22 19:18:20.217  INFO 16931 --- [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-22 19:18:20.530  INFO 16931 --- [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-22 19:18:20.556  INFO 16931 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-22 19:18:21.091  INFO 16931 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3097f8e7
+2024-08-22 19:18:21.093  INFO 16931 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-22 19:18:22.440  INFO 16931 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-22 19:18:22.859  INFO 16931 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-22 19:18:23.202  INFO 16931 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-22 19:18:23.235  INFO 16931 --- [  restartedMain] com.beat.trans_log.TransLogApplication   : Started TransLogApplication in 4.661 seconds (process running for 5.599)
+2024-08-22 19:18:23.238  INFO 16931 --- [  restartedMain] c.b.trans_log.runner.TranLogAppRunner    : non-option Argument : []
+2024-08-22 19:18:23.238  INFO 16931 --- [  restartedMain] c.b.trans_log.runner.TranLogAppRunner    : Argument date : 240820
+2024-08-22 19:18:23.238  INFO 16931 --- [  restartedMain] c.b.trans_log.runner.TranLogAppRunner    : Argument sysCode : sys01
+2024-08-22 19:18:24.085  INFO 16931 --- [pool-2-thread-1] c.b.t.db.service.FileEntityService       : Saving FileEntity: [FileEntity(id=null, systemCode=sys01, filename=smp-20240820.log, path=/Users/kiwi/lab/project/log-trans/sample-log/smp-20240820.log, contens=97229f77fb83aa992f831cd61709498b3b03522afc0ffde6faf4882481ba3f00, filesize=20, status=SUCCESS, date=2024-08-22T19:18:23.241907)]
+2024-08-22 19:18:24.171  INFO 16931 --- [pool-2-thread-1] c.b.t.db.service.FileEntityService       : Saved FileEntity: [FileEntity(id=1, systemCode=sys01, filename=smp-20240820.log, path=/Users/kiwi/lab/project/log-trans/sample-log/smp-20240820.log, contens=97229f77fb83aa992f831cd61709498b3b03522afc0ffde6faf4882481ba3f00, filesize=20, status=SUCCESS, date=2024-08-22T19:18:23.241907)]
+2024-08-22 19:18:24.195  INFO 16931 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-22 19:18:24.201  INFO 16931 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-22 19:18:24.204  INFO 16931 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
